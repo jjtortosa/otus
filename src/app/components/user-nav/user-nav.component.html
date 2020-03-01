@@ -1,0 +1,25 @@
+<div *ngIf="app.user">
+	<a [href]="'/user'"></a>
+	<button mat-button class="user-menu-btn" [matMenuTriggerFor]="userMenu">
+<!--		<img *ngIf="app.user.picture" [src]="app.user.picture">-->
+		{{app.user.name}}
+		<mat-icon>arrow_drop_down</mat-icon>
+	</button>
+	<mat-menu #userMenu="matMenu" [overlapTrigger]="false">
+		<a mat-menu-item routerLink="logout">
+			<mat-icon>exit_to_app</mat-icon>
+			Salir
+		</a>
+	</mat-menu>
+</div>
+<div *ngIf="!app.user">
+	<button mat-button class="user-menu-btn" [matMenuTriggerFor]="guestMenu">
+		<mat-icon>person</mat-icon>
+	</button>
+	<mat-menu #guestMenu="matMenu" [overlapTrigger]="false">
+		<a mat-menu-item routerLink="login">
+			<mat-icon>exit_to_app</mat-icon>
+			Entrar
+		</a>
+	</mat-menu>
+</div>

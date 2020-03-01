@@ -1,0 +1,6 @@
+<a *ngIf="loaded" mat-stroked-button color="primary" class="mat-elevation-z3" [href]="app.server + '/auth/google'">
+	<!--suppress HtmlUnknownTarget -->
+	<img src="/assets/btn_google_light_normal_ios.svg"> Entra con Google
+</a>
+
+<mat-spinner *ngIf="!loaded"></mat-spinner>

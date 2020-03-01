@@ -1,0 +1,14 @@
+:host {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 300px;
+	flex-wrap: wrap;
+}
+
+a img {
+	object-fit: none;
+	width: 32px;
+	height: 32px;
+	margin-right: 12px;
+}
